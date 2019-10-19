@@ -1,0 +1,32 @@
+{
+  "name": "jdfitnesspal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bossman8/jdfitnesspal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bossman8/jdfitnesspal/issues"
+  },
+  "homepage": "https://github.com/Bossman8/jdfitnesspal#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mysql": "^2.17.1",
+    "node": "^12.12.0",
+    "path": "^0.12.7",
+    "sequelize": "^5.21.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
