@@ -1,23 +1,28 @@
 var Sequelize = require("sequelize");
-var sequelize = require("../config/connection");
+var sequelize = require("../config/connection.js");
 
-var User = Sequelize.define("user", {
-  id: {
-    type: Sequelize.INTEGER,
-    autoIncrement: true,
-    primaryKey: true
+var User = sequelize.define(
+  "user",
+  {
+    id: {
+      type: Sequelize.INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    },
+    name: {
+      type: Sequelize.STRING
+    },
+    number: {
+      type: Sequelize.INTEGER
+    },
+    email: {
+      type: Sequelize.STRING
+    }
   },
-  name: {
-    type: Sequelize.STRING
-  },
-  number: {
-    type: Sequelize.INTEGER
-  },
-  email: {
-    type: Sequelize.STRING
-  },
-  timestamps: false
-});
+  {
+    timestamps: false
+  }
+);
 
 User.sync();
 

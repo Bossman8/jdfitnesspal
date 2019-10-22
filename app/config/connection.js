@@ -1,6 +1,11 @@
-var Sequelize = require("sequelize");
+require("dotenv/config");
 
-var sequelize = new Sequelize("", "", "", {
+var keys = require("./keys");
+var Sequelize = require("sequelize");
+var password = keys.sql.myslq_pass;
+console.log(keys.sql);
+
+var sequelize = new Sequelize("jdfitnesspadDB", "root", "Laceylou22!", {
   host: "localhost",
   dialect: "mysql",
   pool: {

@@ -1,7 +1,9 @@
-// var User = require("../app/models/registration");
+var User = require("../app/models/registration.js");
 
 module.exports = function(app) {
   app.get("/registered", (req, res) => {
-    res.json(users);
+    User.findAll({}).then(function(results) {
+      res.json(results);
+    });
   });
 };
