@@ -17,6 +17,12 @@ var User = sequelize.define(
     },
     email: {
       type: Sequelize.STRING
+    },
+    weight: {
+      type: Sequelize.INTEGER
+    },
+    excersize: {
+      type: Sequelize.STRING
     }
   },
   {
