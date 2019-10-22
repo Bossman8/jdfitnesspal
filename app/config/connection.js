@@ -16,3 +16,4 @@ var sequelize = new Sequelize(
 );
 
 module.exports = sequelize;
+console.log("worked");
