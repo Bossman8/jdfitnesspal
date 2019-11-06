@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Register</title>
   </head>
   <body>
@@ -26,7 +27,88 @@
         </ul>
       </div>
     </nav>
-    <div class="container"></div>
+    <div id="modal1" class="modal">
+            <div class="modal-content">
+              <h4>De-activate</h4>
+              <form action="" method="POST" role="form">
+                    <div class="row">
+                            <div class="input-field col s12">
+                              <input id="delEmail" type="email" class="validate" />
+                              <label for="email">Email</label>
+                            </div>
+                          </div>
+                  
+              </form>
+              <div>
+                  <button id="delete" class="btn waves-effect waves-light modal-close" type="submit" name="action">Submit
+                        </button>
+              </div>
+            </div>
+    </div>
+    <div class="container" id="regContainer">
+      <h1 class="center">Register!</h1>
+      <hr style="width: 80%;" />
+      <div class="row">
+        <form class="col s12" action="" method="POST" role="form">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="name" type="text" class="validate" />
+              <label for="name">Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="number" type="text" class="validate" />
+              <label for="number">Number</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="email" class="validate" />
+              <label for="email">Email</label>
+            </div>
+          </div>
+          <div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="weight" type="text" class="validate" />
+                <label for="weight">Weight</label>
+              </div>
+              <div class="input-field col s6">
+                    <label></label>
+                    <select class="browser-default" id="excercise">
+                      <option value="" disabled selected>Choose your preference</option>
+                      <option value="Build Muscle">Build Muscle</option>
+                      <option value="Improve Cardio">Improve Cardio</option>
+                    </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <br>
+        <button class="btn waves-effect waves-light right" id="addNew" type="submit" name="action">Submit</button>
+      </div>
+    </div>
+    <br>
+    <br><br>
+    
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">JDfitnesspal</h5>
+                    <p class="grey-text text-lighten-4"></p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Options</h5>
+                        <ul>
+                          <li><a class="grey-text text-lighten-3 modal-trigger" href="#modal1">De-activate</a></li>
+                        </ul>
+                      </div>
+            </div>
+        </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../app/models/registration.js"></script>
+    <script src="./js/add.js"></script>
   </body>
 </html>

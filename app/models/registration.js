@@ -9,10 +9,10 @@ var User = sequelize.define(
       autoIncrement: true,
       primaryKey: true
     },
-    name: {
+    username: {
       type: Sequelize.STRING
     },
-    number: {
+    usernumber: {
       type: Sequelize.INTEGER
     },
     email: {
@@ -21,7 +21,7 @@ var User = sequelize.define(
     weight: {
       type: Sequelize.INTEGER
     },
-    excersize: {
+    excercise: {
       type: Sequelize.STRING
     }
   },
