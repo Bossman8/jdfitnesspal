@@ -4,12 +4,13 @@ $(document).ready(function() {
 
 $("#addNew").on("click", function(event) {
   event.preventDefault();
+  console.log("#name");
 
   var newUser = {
-    name: $("#name")
+    username: $("#name")
       .val()
       .trim(),
-    number: $("#number")
+    usernumber: $("#number")
       .val()
       .trim(),
     email: $("#email")
@@ -40,7 +41,7 @@ $("#delete").on("click", function(event) {
   console.log(email);
 
   var info = {
-    id: $("#delEmail").val()
+    email: $("#delEmail").val()
   };
   $.post("/api/delete", info).done(function(deldata) {
     console.log(deldata);

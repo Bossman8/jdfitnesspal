@@ -1,4 +1,4 @@
-var User = require("../app/models/registration");
+var User = require("../app/models/registration.js");
 
 module.exports = function(app) {
   app.get("/api/registered", (req, res) => {
@@ -21,8 +21,8 @@ module.exports = function(app) {
 
   app.post("/api/new", (req, res) => {
     User.create({
-      username: req.body.name,
-      usernumber: req.body.number,
+      username: req.body.username,
+      usernumber: req.body.usernumber,
       email: req.body.email,
       weight: req.body.weight,
       excercise: req.body.excercise
@@ -32,7 +32,7 @@ module.exports = function(app) {
   app.post("/api/delete", (req, res) => {
     User.destroy({
       where: {
-        id: req.body.id
+        email: req.body.email
       }
     });
   });
