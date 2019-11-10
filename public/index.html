@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <title>Home</title>
   </head>
   <body>
@@ -23,11 +24,168 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="/">Home</a></li>
           <li><a href="/about">About Us</a></li>
-          <li><a href="/register">Register</a></li>
+          <li><a href="/workouts" class="modal-trigger">Workouts</a></li>
+          <li><a href="/meals" class="modal-trigger">Meals</a></li>
         </ul>
       </div>
     </nav>
-    <div class="container"></div>
+    <div class="container">
+      <h1 class="center teal-text">Welcome to JDFitness!</h1>
+      <h5 class="center teal-text">
+        Your home of finding the workout plan and meal plan that best fits you!
+      </h5>
+      <a
+        class="center waves-effect waves-light btn modal-trigger teal black-text"
+        href="#modal1"
+        style="margin: 10px"
+        >Survey!</a
+      >
+    </div>
+    <br />
+    <div class="parallax-container">
+      <div class="parallax">
+        <img
+          src="data:image/jpeg;base64,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"
+        />
+      </div>
+    </div>
+    <br />
+
+    <!-- Modal -->
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <h1>Survey!</h1>
+      <form action="" method="POST" role="form">
+        <div class="input-field col s12" style="margin: 2%;">
+          <select id="q1">
+            <option value="" disabled selected
+              >Do you feel like you eat healthy?</option
+            >
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+          </select>
+          <label>Question 1</label>
+        </div>
+        <div class="input-field col s12" style="margin: 2%;">
+          <select id="q2">
+            <option value="" disabled selected
+              >Do you have a good workout plan?</option
+            >
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+          </select>
+          <label>Question 2</label>
+        </div>
+        <div class="input-field col s12" style="margin: 2%;">
+          <select id="q3">
+            <option value="" disabled selected
+              >Do you want to make a change?</option
+            >
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+          </select>
+          <label>Question 3</label>
+        </div>
+      </form>
+      <button
+        class="btn modal-close"
+        type="submit"
+        id="surveyBtn"
+        style="margin-left: 10px;"
+      >
+        Submit!
+      </button>
+    </div>
+    <div class="modal" id="modal3">
+      <h1>De-activate</h1>
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <input
+              placeholder="ID Number"
+              id="Delete"
+              type="number"
+              class="validate"
+            />
+            <label for="first_name"></label>
+          </div>
+        </div>
+      </form>
+      <button
+        class="btn modal-close"
+        type="submit"
+        id="deleteBtn"
+        style="margin: 10px;"
+      >
+        Submit
+      </button>
+    </div>
+
+    <div class="container" id="charts" style="background-color:black">
+      <div class="left">
+        <p class="center white-text">Eat Healthy?</p>
+        <canvas id="myChart" height="200px"></canvas>
+      </div>
+      <div class="left">
+        <p class="center white-text">Have Workout Plan?</p>
+        <canvas id="myChart1" height="200"></canvas>
+      </div>
+      <div class="left">
+        <p class="center white-text">Want Help?</p>
+        <canvas id="myChart2" height="200"></canvas>
+      </div>
+    </div>
+    <div>
+      <div class="carousel">
+        <a class="carousel-item" href="#two!"
+          ><img
+            src="https://images.unsplash.com/photo-1483721310020-03333e577078?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+        /></a>
+        <a class="carousel-item" href="#three!"
+          ><img
+            src="https://images.unsplash.com/photo-1546749876-2088f8b19e09?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+        /></a>
+        <a class="carousel-item" href="#four!"
+          ><img
+            src="https://images.unsplash.com/photo-1555570089-3e4dc9087329?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+        /></a>
+        <a class="carousel-item" href="#five!"
+          ><img
+            src="https://images.unsplash.com/photo-1559589065-38e6272cad90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+        /></a>
+        <a class="carousel-item" href="#six!"
+          ><img
+            src="https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+        /></a>
+        <a class="carousel-item" href="#seven!"
+          ><img
+            src="https://images.unsplash.com/photo-1500049242364-5f500807cdd7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+        /></a>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">JDfitnesspal</h5>
+            <p class="grey-text text-lighten-4"></p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Options</h5>
+            <ul>
+              <li>
+                <a class="grey-text text-lighten-3 modal-trigger" href="#modal3"
+                  >De-activate</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
   </body>
 </html>

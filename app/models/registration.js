@@ -1,25 +1,19 @@
 var Sequelize = require("sequelize");
 var sequelize = require("../config/connection.js");
 
-var User = sequelize.define(
-  "user",
+var Chart = sequelize.define(
+  "chart",
   {
     id: {
       type: Sequelize.INTEGER,
       autoIncrement: true,
       primaryKey: true
     },
-    username: {
+    workout: {
       type: Sequelize.STRING
     },
-    usernumber: {
-      type: Sequelize.INTEGER
-    },
-    email: {
+    food: {
       type: Sequelize.STRING
-    },
-    weight: {
-      type: Sequelize.INTEGER
     },
     excercise: {
       type: Sequelize.STRING
@@ -30,6 +24,6 @@ var User = sequelize.define(
   }
 );
 
-User.sync();
+Chart.sync();
 
-module.exports = User;
+module.exports = Chart;

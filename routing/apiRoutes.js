@@ -1,15 +1,15 @@
-var User = require("../app/models/registration.js");
+var Chart = require("../app/models/registration.js");
 
 module.exports = function(app) {
-  app.get("/api/registered", (req, res) => {
-    User.findAll({}).then(function(results) {
+  app.get("/api/chartInfo", (req, res) => {
+    Chart.findAll({}).then(function(results) {
       res.json(results);
     });
   });
 
   app.get("/api/:excercise", (req, res) => {
     if (req.params.excercise) {
-      User.findAll({
+      Chart.findAll({
         where: {
           excercise: req.params.excercise
         }
@@ -19,20 +19,42 @@ module.exports = function(app) {
     }
   });
 
+  app.get("/api/:workout", (req, res) => {
+    if (req.params.workout) {
+      Chart.findAll({
+        where: {
+          workout: req.params.workout
+        }
+      }).then(function(results) {
+        res.json(results);
+      });
+    }
+  });
+
+  app.get("/api/:food", (req, res) => {
+    if (req.params.food) {
+      Chart.findAll({
+        where: {
+          food: req.params.food
+        }
+      }).then(function(results) {
+        res.json(results);
+      });
+    }
+  });
+
   app.post("/api/new", (req, res) => {
-    User.create({
-      username: req.body.username,
-      usernumber: req.body.usernumber,
-      email: req.body.email,
-      weight: req.body.weight,
+    Chart.create({
+      workout: req.body.workout,
+      food: req.body.food,
       excercise: req.body.excercise
     });
   });
 
   app.post("/api/delete", (req, res) => {
-    User.destroy({
+    Chart.destroy({
       where: {
-        email: req.body.email
+        id: req.body.id
       }
     });
   });
