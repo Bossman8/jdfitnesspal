@@ -7,6 +7,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -15,12 +19,13 @@
   <body>
     <nav>
       <div class="nav-wrapper">
-        <img
-          src="./assets/images/Logo.png"
-          class="brand-logo center"
-          height="63"
-        />
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <a href="#!" class="brand-logo center"
+          ><img src="./assets/images/Logo.png" height="63"
+        /></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+        <ul class="right hide-on-med-and-down">
           <li><a href="/">Home</a></li>
           <li><a href="/about">About Us</a></li>
           <li><a href="/workouts" class="modal-trigger">Workouts</a></li>
@@ -28,20 +33,113 @@
         </ul>
       </div>
     </nav>
-    <div class="container"></div>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/workouts" class="modal-trigger">Workouts</a></li>
+      <li><a href="/meals" class="modal-trigger">Meals</a></li>
+    </ul>
+    <div class="container" id="aboutDiv">
+      <div class="about" id="about">
+        <h1 class="center">About Us</h1>
+        <h4>Our Mission</h4>
+        <h5>
+          We are a group of people who really want to make a difference in the
+          lives and well beings of others. We are driven to help in whatever way
+          we possibly can. Over the past few months we have interviewed hundreds
+          of people that we have come across about their knowlegde on staying
+          healthy, eating habits, and workout plans. With hundreds upon hundreds
+          of different costly workout programs and diets out there, most of the
+          people we interviewed were lost on what was actually best for them.
+          For this reason, we have decided to build this simple program to
+          easily help people become who and what they want to be.
+        </h5>
+        <br />
+        <h5>
+          Please take a minute and look over the workout plans/ideas and meals
+          we have provided here for you. It is important to know the it is not
+          just about changing your diet for a couple of months in order to burn
+          some fat, but is actually about changing your lifestyle to match who
+          you want to be. We have worked hard to provide you with healthy and
+          tasty dishes that you will enjoy.
+        </h5>
+        <br />
+        <h4>Our Goal</h4>
+        <h5>Help those who want to change, to change.</h5>
+      </div>
+    </div>
+    <div class="container circle" id="emailDiv">
+      <h3 class="white-text center">Email Us</h3>
+      <form action="https://formspree.io/xyygwkvg" method="POST">
+        <label class="white-text" for="lname">Name</label>
+        <input
+          class="center grey hoverable"
+          type="text"
+          id="fullName"
+          name="name"
+        />
+
+        <label class="white-text" for="email">Your Email</label>
+        <input
+          class="center grey hoverable"
+          type="email"
+          id="email"
+          name="replyto"
+        />
+
+        <label class="white-text" for="lname">Subject</label>
+        <input
+          class="center grey hoverable"
+          type="text"
+          id="subject"
+          name="subject"
+        />
+
+        <label class="white-text" for="subject">Message</label>
+        <textarea
+          class="grey hoverable"
+          id="subject"
+          name="message"
+          style="height:200px;"
+        ></textarea>
+
+        <input
+          class="black white-text btn hoverable"
+          type="submit"
+          name="submit"
+          value="Send"
+          style="margin: 5px;"
+        />
+        <input
+          class="black white-text btn hoverable"
+          type="reset"
+          name="reset"
+          value="Reset"
+          onclick="return resetForm(this.form);"
+          style="margin: 5px;"
+        />
+      </form>
+    </div>
 
     <footer class="page-footer">
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
             <h5 class="white-text">JDfitnesspal</h5>
+            <h6 class="grey-text">Brought to you by JonDon Digital Design</h6>
             <p class="grey-text text-lighten-4"></p>
           </div>
           <div class="col l4 offset-l2 s12">
             <h5 class="white-text">Options</h5>
+
             <ul>
+              <li><a href="/about/email" class="grey-text">Contact Us</a></li>
               <li>
-                <a class="grey-text text-lighten-3 modal-trigger" href="#modal3"
+                <a
+                  class="text-lighten-3 modal-trigger"
+                  href="#modal3"
+                  style="color: grey;"
                   >De-activate</a
                 >
               </li>
@@ -52,5 +150,10 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".sidenav").sidenav();
+      });
+    </script>
   </body>
 </html>

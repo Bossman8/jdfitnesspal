@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $(".parallax").parallax();
+  $(".button-collapse").sideNav();
 });
 $(document).ready(function() {
   $(".carousel").carousel();
@@ -9,6 +10,9 @@ $(document).ready(function() {
 });
 $(document).ready(function() {
   $("select").formSelect();
+});
+$(document).ready(function() {
+  $(".sidenav").sidenav();
 });
 
 // var ctx = document.getElementById('myChart').getContext('2d');
@@ -64,6 +68,7 @@ $("#deleteBtn").on("click", function(event) {
     console.log(delData);
   });
 });
+
 function getCharts() {
   $.get("/api/chartInfo", function(data) {
     console.log(data);

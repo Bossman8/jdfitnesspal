@@ -7,6 +7,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -16,12 +20,13 @@
   <body>
     <nav>
       <div class="nav-wrapper">
-        <img
-          src="./assets/images/Logo.png"
-          class="brand-logo center"
-          height="63"
-        />
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <a href="#!" class="brand-logo center"
+          ><img src="./assets/images/Logo.png" height="63"
+        /></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+        <ul class="right hide-on-med-and-down">
           <li><a href="/">Home</a></li>
           <li><a href="/about">About Us</a></li>
           <li><a href="/workouts" class="modal-trigger">Workouts</a></li>
@@ -29,6 +34,14 @@
         </ul>
       </div>
     </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/workouts" class="modal-trigger">Workouts</a></li>
+      <li><a href="/meals" class="modal-trigger">Meals</a></li>
+    </ul>
+
     <div class="container">
       <h1 class="center teal-text">Welcome to JDFitness!</h1>
       <h5 class="center teal-text">
@@ -170,13 +183,19 @@
         <div class="row">
           <div class="col l6 s12">
             <h5 class="white-text">JDfitnesspal</h5>
+            <h6 class="grey-text">Brought to you by JonDon Digital Design</h6>
             <p class="grey-text text-lighten-4"></p>
           </div>
           <div class="col l4 offset-l2 s12">
             <h5 class="white-text">Options</h5>
+
             <ul>
+              <li><a href="/about/email" class="grey-text">Contact Us</a></li>
               <li>
-                <a class="grey-text text-lighten-3 modal-trigger" href="#modal3"
+                <a
+                  class="text-lighten-3 modal-trigger"
+                  href="#modal3"
+                  style="color: grey;"
                   >De-activate</a
                 >
               </li>
