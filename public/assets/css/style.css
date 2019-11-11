@@ -43,4 +43,21 @@ footer {
 }
 #mealsDiv {
   background-image: url(../images/dust_scratches.png);
+  margin-bottom: 2%;
+  min-height: 550px;
+}
+#carbMeals {
+  margin-left: 2%;
+}
+#slimMeals {
+  margin-left: 2%;
+}
+#healthyHeight {
+  line-height: 160px;
+}
+#modal1 {
+  background-image: url(../images/dust_scratches.png);
+}
+#mealsDiv {
+  border-radius: 10px 10px 10px 10px;
 }

@@ -42,14 +42,43 @@
     </ul>
     <div class="container">
       <div class="mealsDiv" id="mealsDiv">
-        <div class="slimMeals" id="slimMeals">
-          <h3>Meals to help lose weight</h3>
-          <hr />
+        <h3>Meals to help lose weight</h3>
+        <div class="row" id="healthyHeight">
+          <div class="input-field col s6">
+            <label for="ingredient">Name an ingredient</label>
+            <input type="text" id="lowCarbIngr" />
+          </div>
+          <button
+            class="btn waves-effect waves-light"
+            type="submit"
+            name="action"
+            id="submitLowCal"
+          >
+            Submit
+            <i class="material-icons right">send</i>
+          </button>
         </div>
-        <div class="carbMeals" id="carbMeals">
-          <h3>Meals to Gain Mass</h3>
-          <hr />
+        <hr />
+        <div id="slimMeals"></div>
+
+        <h3>Meals to Gain Mass</h3>
+        <div class="row">
+          <div class="input-field col s6">
+            <label for="ingredient">Name an ingredient</label>
+            <input type="text" id="highCarbIngr" />
+          </div>
+          <button
+            class="btn waves-effect waves-light"
+            type="submit"
+            name="action"
+            id="submitHighCal"
+          >
+            Submit
+            <i class="material-icons right">send</i>
+          </button>
         </div>
+
+        <div class="carbMeals" id="carbMeals"></div>
       </div>
     </div>
 
@@ -81,10 +110,6 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-      $(document).ready(function() {
-        $(".sidenav").sidenav();
-      });
-    </script>
+    <script src="./js/meals.js"></script>
   </body>
 </html>
