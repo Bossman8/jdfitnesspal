@@ -53,7 +53,7 @@ footer {
   margin-left: 2%;
 }
 #healthyHeight {
-  line-height: 160px;
+  min-height: 180px;
 }
 #modal1 {
   background-image: url(../images/dust_scratches.png);
