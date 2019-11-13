@@ -16,8 +16,3 @@ var sequelize = new Sequelize(
 );
 
 module.exports = sequelize;
-
-DB_HOST = us - cdbr - iron - east - (05).cleardb.net;
-DB_USER = bd28da3dce2aa6;
-DB_PASS = df7a56b2;
-DB_NAME = heroku_64e34bb2eb9c5d1;
