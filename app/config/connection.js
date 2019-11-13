@@ -1,11 +1,11 @@
 var Sequelize = require("sequelize");
 
 var sequelize = new Sequelize(
-  process.env.DB_NAME,
-  process.env.DB_USER,
-  process.env.DB_PASS,
+  "heroku_64e34bb2eb9c5d1",
+  "bd28da3dce2aa6",
+  "df7a56b2",
   {
-    host: process.env.DB_HOST,
+    host: "us-cdbr-iron-east-05.cleardb.net",
     dialect: "mysql",
     pool: {
       max: 5,
@@ -16,3 +16,8 @@ var sequelize = new Sequelize(
 );
 
 module.exports = sequelize;
+
+DB_HOST = us - cdbr - iron - east - (05).cleardb.net;
+DB_USER = bd28da3dce2aa6;
+DB_PASS = df7a56b2;
+DB_NAME = heroku_64e34bb2eb9c5d1;
