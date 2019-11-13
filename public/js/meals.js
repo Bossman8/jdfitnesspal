@@ -24,13 +24,13 @@ function getLowCal() {
       var br = $("<br>");
       var title = $("<h4>");
       var pic = $("<img>");
-      var recipe = $("<p>");
+      var recipe = $("<ul>");
       var label = response.hits[i].recipe.label;
       var image = response.hits[i].recipe.image;
-      var ingredients3 = [];
+      var ingredients3 = $("<li>");
       for (r = 0; r < response.hits[i].recipe.ingredientLines.length; r++) {
         var ingredients1 = response.hits[i].recipe.ingredientLines[r];
-        ingredients3.push(ingredients1 + "  & ");
+        ingredients3.append(ingredients1 + "  & ");
       }
       console.log(ingredients3);
       title.html(label);

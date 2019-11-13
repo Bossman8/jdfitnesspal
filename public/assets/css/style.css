@@ -58,6 +58,35 @@ footer {
 #modal1 {
   background-image: url(../images/dust_scratches.png);
 }
+#modal2 {
+  background-image: url(../images/dust_scratches.png);
+}
+#modal3 {
+  background-image: url(../images/dust_scratches.png);
+}
+#modal4 {
+  background-image: url(../images/dust_scratches.png);
+}
+#modal5 {
+  background-image: url(../images/dust_scratches.png);
+}
+#modal6 {
+  background-image: url(../images/dust_scratches.png);
+}
+#modal7 {
+  background-image: url(../images/dust_scratches.png);
+}
+#modal8 {
+  background-image: url(../images/dust_scratches.png);
+}
 #mealsDiv {
+  border-radius: 10px 10px 10px 10px;
+}
+#workDiv {
+  background-image: url(../images/dust_scratches.png);
+  margin-bottom: 4%;
+  padding-bottom: 2%;
+}
+.modal {
   border-radius: 10px 10px 10px 10px;
 }
