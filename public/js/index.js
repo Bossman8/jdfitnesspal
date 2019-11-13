@@ -31,6 +31,7 @@ $(document).ready(function() {
 //     },
 //     options: options
 // });
+
 $("#surveyBtn").on("click", function(event) {
   event.preventDefault();
 
