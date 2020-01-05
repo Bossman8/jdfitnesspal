@@ -29,8 +29,13 @@ function getLowCal() {
       var image = response.hits[i].recipe.image;
       var ingredients3 = $("<li>");
       for (r = 0; r < response.hits[i].recipe.ingredientLines.length; r++) {
-        var ingredients1 = response.hits[i].recipe.ingredientLines[r];
-        ingredients3.append(ingredients1 + "  & ");
+        if (r === r[-1]) {
+          var ingredients1 = response.hits[i].recipe.ingredientLines[r];
+          ingredients3.append(ingredients1 + ", ");
+        } else {
+          var ingredients1 = response.hits[i].recipe.ingredientLines[r];
+          ingredients3.append(ingredients1 + ", ");
+        }
       }
       console.log(ingredients3);
       title.html(label);
