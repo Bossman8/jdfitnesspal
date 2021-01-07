@@ -49,6 +49,7 @@ function getLowCal() {
       $("#slimMeals").append(br);
     }
   });
+  return false
 }
 
 function getHighCal() {
@@ -90,4 +91,5 @@ function getHighCal() {
       $("#carbMeals").append(br);
     }
   });
+  return false
 }
